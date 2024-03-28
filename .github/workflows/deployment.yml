@@ -31,7 +31,7 @@ jobs:
 
   build:
     name: 🏭 Build
-    needs: [lint, test]
+    needs: [lint]
     runs-on: ubuntu-latest
     steps:
       - name: 🎯 Checkout
