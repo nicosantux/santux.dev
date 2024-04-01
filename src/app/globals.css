@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --accent: 198 80% 28%;
+    --background: 56 10% 90%;
+    --border: 240 4% 84%;
+    --code-highlight: 56 4% 100%;
+    --code: 56 4% 95%;
+    --dock-border: 240 16% 84%;
+    --dock-foreground: 240 14% 12%;
+    --dock-icon: 56 4% 96%;
+    --dock: 56 4% 88%;
+    --foreground: 240 14% 24%;
+    --heading-1: clamp(2.25rem, 4vw + 1rem, 3rem);
+    --heading-2: clamp(1.75rem, 3vw + 1rem, 2.25rem);
+    --heading-3: clamp(1.5rem, 2vw + 1rem, 1.75rem);
+    --heading-4: clamp(1.25rem, 1vw + 1rem, 1.5rem);
+  }
+
+  .dark {
+    --accent: 198 41% 61%;
+    --background: 240 14% 12%;
+    --border: 240 4% 20%;
+    --code-highlight: 240 16% 32%;
+    --code: 240 16% 16%;
+    --dock-border: 240 8% 24%;
+    --dock-foreground: 56 32% 80%;
+    --dock-icon: 240 14% 8%;
+    --dock: 240 16% 16%;
+    --foreground: 56 32% 85%;
+  }
+}
+
+@layer utilities {
+  .flow > * + * {
+    margin-top: 1.5em;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground;
+  }
+}
