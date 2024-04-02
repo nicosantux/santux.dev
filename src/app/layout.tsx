@@ -4,6 +4,7 @@ import { type ReactNode } from 'react'
 
 import { type Metadata } from 'next'
 
+import { Dock } from '@/components/dock'
 import { ThemeProvider } from '@/providers/theme-provider'
 
 import './globals.css'
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps) {
           <main className='mx-auto w-[min(70ch,100%-2.5rem)] overflow-x-hidden px-1 py-20'>
             {children}
           </main>
+          <Dock />
         </ThemeProvider>
       </body>
     </html>
