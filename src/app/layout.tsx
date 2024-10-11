@@ -1,8 +1,6 @@
-import localFont from 'next/font/local'
-
-import { type ReactNode } from 'react'
-
 import { type Metadata } from 'next'
+import localFont from 'next/font/local'
+import { type ReactNode } from 'react'
 
 import { Command } from '@/components/command'
 import { Dock } from '@/components/dock'

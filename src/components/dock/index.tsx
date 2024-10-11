@@ -18,7 +18,7 @@ import { ThemeToggleButton } from '../theme-toggle-button'
 
 import { DockIcon } from './component/dock-icon'
 
-const links: readonly Readonly<NavigationLink[]>[] = [
+const links: readonly (readonly NavigationLink[])[] = [
   [
     { href: '/', Icon: HomeIcon, tooltip: 'Inicio' },
     { href: '/blog', Icon: BlogIcon, tooltip: 'Blog' },
