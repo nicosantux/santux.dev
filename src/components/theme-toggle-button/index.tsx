@@ -1,7 +1,6 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-
 import { type ComponentPropsWithoutRef, useRef } from 'react'
 
 import { AnimatePresence, motion, type MotionValue } from 'framer-motion'
