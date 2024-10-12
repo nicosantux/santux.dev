@@ -13,7 +13,6 @@
       - any-glob-to-any-file:
           - .node-version
           - tsconfig.json
-          - tsup.config.ts
 
 ⚙️ configuration:
   - changed-files:
@@ -26,8 +25,10 @@
           - .node-version
           - .prettierignore
           - .prettierrc.json
-          - .tsconfig.json
-          - .tsup.config.ts
+          - next.config.mjs
+          - postcss.config.mjs
+          - tailwind.config.ts
+          - tsconfig.json
 
 📦 dependencies:
   - changed-files:
