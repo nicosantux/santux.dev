@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-import { Content, Overlay, Portal, Root } from '@radix-ui/react-dialog'
+import { Content, Overlay, Portal, Root, Title } from '@radix-ui/react-dialog'
 import { Command as Cmdk } from 'cmdk'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
@@ -29,7 +29,7 @@ export function Command() {
   const { setTheme } = useTheme()
   const router = useRouter()
 
-  const cmd: readonly Readonly<Cmd>[] = [
+  const cmd: readonly Cmd[] = [
     {
       heading: 'Páginas',
       items: [
@@ -116,12 +116,13 @@ export function Command() {
                 variants={dialogVariants}
               >
                 <Cmdk>
+                  <Title className='sr-only'>Escribe un comando o busca</Title>
                   <Cmdk.Input
                     className='w-full border-b border-border bg-transparent p-3 focus:outline-none'
                     placeholder='Escribe un comando o busca...'
                   />
                   <Cmdk.List className='max-h-[421px] overflow-y-auto overflow-x-hidden'>
-                    <Cmdk.Empty className='px-3 py-2'>No results found.</Cmdk.Empty>
+                    <Cmdk.Empty className='px-3 py-2'>No hay resultados.</Cmdk.Empty>
                     {cmd.map(({ heading, items }) => {
                       return (
                         <Cmdk.Group heading={heading} key={heading}>
