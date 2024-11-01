@@ -1,10 +1,10 @@
-import { useCallback, type MutableRefObject } from 'react'
+import { type RefObject, useCallback } from 'react'
 
 import { useAnimationControls, useSpring, useTransform, type MotionValue } from 'framer-motion'
 
 interface DockAnimation<T extends HTMLElement | null> {
   mouseX: MotionValue<number>
-  ref: MutableRefObject<T>
+  ref: RefObject<T>
 }
 
 export function useDockAnimation<T extends HTMLElement | null>({ mouseX, ref }: DockAnimation<T>) {

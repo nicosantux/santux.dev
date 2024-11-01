@@ -4,6 +4,7 @@ import { type ReactNode } from 'react'
 
 import { Command } from '@/components/command'
 import { Dock } from '@/components/dock'
+import { Logo } from '@/icons/logo'
 import { ThemeProvider } from '@/providers/theme-provider'
 
 import './globals.css'
@@ -37,6 +38,10 @@ export default function RootLayout({ children }: LayoutProps) {
       >
         <ThemeProvider attribute='class' defaultTheme='dark' disableTransitionOnChange>
           <main className='mx-auto w-[min(70ch,100%-2.5rem)] overflow-x-hidden px-1 py-20'>
+            <h1 className='mb-16 flex justify-center'>
+              <span className='sr-only'>Santux</span>
+              <Logo className='w-20' />
+            </h1>
             {children}
           </main>
           <Command />
